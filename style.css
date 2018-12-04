@@ -1,0 +1,475 @@
+* {
+
+
+    box-sizing: border-box;
+
+}
+
+
+body {
+
+    margin: 0 auto;
+    font-family: 'Segoe UI';
+    line-height: 1.6;
+    background-color: #727272;
+
+}
+
+.container {
+
+    max-width: 1870px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    animation-duration: 1.s;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.navigation {
+
+    background-color: #771295;
+    display: grid;
+    text-align: center;
+    color: white;
+    margin: auto;
+    /*
+    position: sticky;
+    top: 0;
+*/
+    opacity: .9;
+    padding: 10px;
+
+
+}
+
+
+.navigation ul {
+
+
+    display: none;
+    /*
+    display: grid;
+    grid-template-columns: 1fr;
+*/
+    text-align: center;
+    padding: 0em;
+
+
+}
+
+
+
+.navigation ul li {
+    list-style: none;
+    padding: 1em;
+
+}
+
+.navigation ul li:hover {
+
+    color: #ebeb09#ebeb09;
+    font-weight: bold;
+    transition: color 2.5s;
+    transition: font-weight 2.5s;
+}
+
+
+/*HAMBURGER MENU*/
+
+
+.hamburger {
+    display: block;
+    position: sticky;
+    top: 0px;
+}
+
+.hamburger .line {
+    width: 50px;
+    height: 5px;
+    display: block;
+    background-color: white;
+    margin: 8px auto;
+    transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+
+    /*moz, webkit, and o make sure the transition works on all browsers*/
+
+}
+
+.hamburger.is-active .line:nth-child(2) {
+
+    /*this code occurs on the line class(2nd child)when the classes hamburger and is-active both occur*/
+
+    opacity: 0;
+    /*    background-color: green;*/
+
+}
+
+.hamburger.is-active .line:nth-child(1) {
+    /*This makes the first line go down the Y-axis by 13px
+    and rotate 45 degrees*/
+
+    transform: translateY(13px) rotate(45deg);
+
+}
+
+.hamburger.is-active .line:nth-child(3) {
+    transform: translateY(-13px) rotate(-45deg);
+
+}
+
+
+
+.hamburger:hover {
+
+    cursor: pointer;
+
+}
+
+.mobile-menu {
+
+    display: none;
+    /*
+    position: sticky;
+    top: 67px;
+*/
+    opacity: 0.9;
+
+}
+
+.mobile-menu ul {
+    list-style: none;
+    text-align: center;
+    margin: auto;
+    background-color: #771295;
+    color: white;
+    padding: 0em;
+
+}
+
+.mobile-menu ul li {
+
+    padding: 1em;
+
+}
+
+
+
+.mobile-menu ul li:hover {
+
+
+    color: #ebeb09;
+    font-weight: bold;
+    transition: color 0.5s;
+    transition: font-weight 0.5s;
+
+}
+
+
+
+.main {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 100px;
+    text-align: center;
+    font-size: 1em;
+    margin-left: auto;
+    margin-right: auto;
+    /*    background-color: #727272;*/
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/main.jpg');
+    background-repeat: no-repeat;
+    padding-top: 40px;
+
+
+    background-size: cover;
+    color: white;
+    padding-bottom: 300px;
+
+}
+
+
+.main h1 {
+
+
+    padding: 1em;
+    font-size: 1.5em;
+    text-align: center;
+    margin: auto;
+    text-shadow: 3px 5px 2px #474747;
+
+
+}
+
+.main button {
+
+
+
+    width: 40%;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid #6f0bba;
+    background-color: #771295;
+    color: white;
+    height: 10vh;
+    font-size: 1em;
+    font-weight: bold;
+    text-align: center;
+
+}
+
+
+.fa {
+    text-shadow: 3px 5px 2px #474747;
+}
+
+
+#about {
+    padding: 1em;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 30px;
+    background-color: #f5f5f4;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    font-weight: bold;
+
+}
+
+#about h2 {
+    text-decoration: underline;
+}
+
+#about ul li {
+
+    line-height: 2.5em;
+
+}
+
+/*
+.about img {
+
+    text-align: center;
+    height: 20vh;
+    width: 50vw;
+    margin: auto;
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+}
+*/
+
+#courses {
+
+    text-decoration: underline;
+
+
+}
+
+#location {
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 50px;
+    padding: 2em;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    font-weight: bold;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/building.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 70vh;
+    color: white;
+    text-shadow: 3px 5px 2px #474747;
+    font-size: 0.8em;
+
+}
+
+#contact {
+    padding-top: 50px;
+    text-align: center;
+
+}
+
+#contact form {
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    text-align: center;
+    margin: auto;
+}
+
+#contact form label {
+
+    display: block;
+
+}
+
+.full {
+    grid-column: 1/3;
+
+}
+
+.full textarea {
+
+    height: 20vh;
+
+}
+
+.full button {
+    background-color: #771295;
+    width: 50vw;
+    font-size: 1em;
+    font-weight: bold;
+    text-align: center;
+    color: white;
+
+}
+
+
+
+
+
+
+/*BIG SCREEN BELOW*/
+
+
+
+@media(min-width:768px) {
+
+
+
+    .hamburger {
+        display: none;
+
+    }
+
+
+    .main {
+
+        padding-top: 100px;
+    }
+
+
+    .navigation {
+        display: grid;
+        position: sticky;
+        top: 0;
+    }
+
+    .navigation ul {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        padding: 0em;
+
+
+    }
+
+    .navigation ul li:hover {
+
+        color: #ebeb09;
+        font-weight: bold;
+        transition: color 2.5s;
+        transition: font-weight 2.5s;
+
+    }
+
+
+    .mobile-menu {
+        display: none;
+    }
+
+    #about {
+
+        background-color: #f5f5f4;
+        grid-template-columns: 1fr;
+
+    }
+
+    #about ul {
+        text-align: left;
+        position: relative;
+        left: 10vw;
+
+    }
+
+    #about ul li {
+
+        line-height: 3em;
+
+    }
+
+    /*
+    .about img {
+
+        height: 50vh;
+        width: 50vw;
+        margin: auto;
+    }
+*/
+
+    #courses {}
+
+    #location {
+
+        grid-template-columns: 1fr;
+        font-size: 1em;
+        word-spacing: 1em;
+
+
+    }
+
+    #contact form {
+        display: grid;
+
+
+
+
+    }
+
+    #contact form label {
+
+        display: block;
+
+
+    }
+
+    .full {
+
+        grid-column: 1/3;
+
+
+    }
+
+    .full input {
+
+        width: 35%;
+
+
+    }
+
+    .full textarea {
+
+        width: 50%;
+
+
+    }
+
+    .full button {
+
+        width: 20vw;
+
+
+    }
+
+
+}
